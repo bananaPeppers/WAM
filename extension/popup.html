@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAM Agent</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>WAM Agent</h1>
+    <span id="site" class="site"></span>
+  </header>
+
+  <section id="statusCard" class="status status-safe">
+    <div class="status-pill" id="statusPill">Checking...</div>
+    <div class="status-source" id="statusSource"></div>
+  </section>
+
+  <section>
+    <h2>What WAM found</h2>
+    <ul id="findings" class="findings">
+      <li class="muted">No page scanned yet.</li>
+    </ul>
+    <p id="explanation" class="explanation hidden"></p>
+    <p id="note" class="note hidden"></p>
+  </section>
+
+  <section class="settings">
+    <h2>Settings</h2>
+    <label class="row">
+      <input type="checkbox" id="enabled" />
+      <span>Monitoring enabled</span>
+    </label>
+    <button id="pauseBtn" class="btn">Pause WAM on this site</button>
+    <label class="field">
+      <span>Backend URL</span>
+      <input type="text" id="backendUrl" placeholder="http://127.0.0.1:5000" />
+    </label>
+    <div class="row">
+      <button id="saveBtn" class="btn btn-primary">Save</button>
+      <button id="rescanBtn" class="btn">Re-scan page</button>
+    </div>
+    <p class="privacy">WAM checks page structure only. It never reads your
+      passwords, messages, or other typed information.</p>
+  </section>
+
+  <script src="wam-local.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

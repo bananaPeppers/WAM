@@ -1,0 +1,11 @@
+# Backend runtime dependencies.
+# Flask is required to run the gateway.
+Flask>=3.0
+
+# Optional. Only needed to use your self-hosted MariaDB instead of the
+# built-in in-memory storage.
+# PyMySQL>=1.1
+
+# Optional. Only needed to make real Google Gemini calls. The app runs fine
+# without it (local checks only).
+# google-generativeai>=0.7
